@@ -1,15 +1,15 @@
 # Tech Challenge Winter Semester 19-20
 
 # Overview
-This is the technical documentation for the tech challenge project secure medical image storage system by MediDonate group. This repository hosts every subsystem of the project. The codebase is written in Angular (version 8.2.14). you can find the requirement modules in requirement.txt
+This is the technical documentation for the tech challenge project **secure medical image storage system** by **MediDonate** group. This repository hosts every subsystem of the project. The codebase is written in **Angular** (version 8.2.14). you can find the requirement modules in **requirement.txt**
 
 # Project Structure
-* images: Stores the example of medical images.
-* home: Stores the code for home page bottom in website.
-* form: Stores the code for Form page bottom in website.
-* image-gallery: Stores the code for visualities of medical images
-* maps: Stores the code for knowledge graph of available medical image data set.  It creates a server that allows third party companies to see available data to system.
-* contact: Stores the code for contact bottom in website
+**images:** Stores the example of medical images.
+**home:** Stores the code for home page bottom in website.
+**form**: Stores the code for Form page bottom in website.
+**image-gallery:** Stores the code for visualities of medical images
+**maps:** Stores the code for knowledge graph of available medical image data set.  It creates a server that allows third party companies to see available data to system.
+**contact:** Stores the code for contact bottom in website
 
 
 
