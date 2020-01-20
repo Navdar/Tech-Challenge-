@@ -1,15 +1,7 @@
 # Tech Challenge Winter Semester 19-20
 
 # Overview
-This is the technical documentation for the tech challenge project Building Sphere by the Triplex group. This repository hosts every subsystem of the project. The codebase is written in Golang( version 1.11.4). It uses Docker(version 18.09.1) as the development infrastructure. To work on this project, you need to have both Golang and Docker installed on your system.
-
-Note:"MHD_read_write.py" is the fork of https://github.com/yanlend/mhd_utils
-
-Extended functionality:
-*  allows to write beamformed
-*  allows to write non-beamformed
-*  allows to label the beamformed and non-beamformed data
-*  allows to visualize the beamformed and non-beamformed data
+This is the technical documentation for the tech challenge project secure medical image storage system by MediDonate group. This repository hosts every subsystem of the project. The codebase is written in Angular (version 8.2.14). you can find the requirement modules in requirement.txt
 
 # Project Structure
 images: Stores the screenshosts of the system.
