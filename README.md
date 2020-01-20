@@ -14,8 +14,10 @@ This is the technical documentation for the tech challenge project **secure medi
 
 
 # Running
-*  cd DeepFormer_Data_Analysis_Tool/ python Tool.py
-*  Make sure you have Golang and docker installed.
+*  npm build
+*  npm start
+*  go to http://localhost:4200/
+
 Run make docker. If Golang cannot find dependencies, go to sphere folder and run go get.
 Once every service starts, go to localhost:8080 and connect to db. Username is root, password is example. Import db.sql to the database.
 Go to localhost:4000 to see user dashboard.
