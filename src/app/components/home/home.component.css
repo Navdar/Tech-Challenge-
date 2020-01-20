@@ -1,0 +1,11 @@
+body, html {
+  height: 10%;
+}
+.hero {
+  height:auto;
+  min-height:95vh;
+  min-weight:9vh;
+  background-image: url('/assets/img/new1.jpeg') !important;
+  background-size:cover;
+	background-position:center;
+}

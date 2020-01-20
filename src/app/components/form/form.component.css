@@ -1,0 +1,36 @@
+.form-group{
+    padding:20px;
+    display: flex;
+    margin-left: 70px;
+    width: 100%;
+    align-items: center;
+    justify-content:center;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+
+
+    height: 100%
+}
+
+
+
+.form-control{
+    padding:20px;
+    display: flex;
+    margin-left: 70px;
+    width: 100%;
+    align-items: center;
+    justify-content:center;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+
+
+    height: 100%
+}

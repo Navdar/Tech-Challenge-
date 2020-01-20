@@ -1,0 +1,221 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Request Data</h1>
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+      <div class="form-group">
+        <label for="name"> First Name</label>
+        <input type="text" class="form-control" id="name"
+               required
+               [(ngModel)]="model.firstname" name="name"
+               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+             class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Last Name</label>
+        <input type="text" class="form-control" id="alterEgo"
+               [(ngModel)]="model.lastname" name="alterEgo">
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Email Address</label>
+        <input type="text" class="form-control" id="alterEgo"
+               [(ngModel)]="model.email" name="alterEgo">
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Date of Birth</label>
+        <input [ngModel]="startDate | date:'yyyy-MM-dd'" (ngModelChange)="startDate = $event" type="date" name="startDate"/>
+
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Brief description of your request</label>
+
+        <textarea type="text" id="form75" class="form-control md-textarea" rows="3" mdbInput></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Selection Criteria (e.g., asthmatics seen in Asthma Clinic</label>
+        <input type="text" class="form-control" id="alterEgo"
+               [(ngModel)]="model.SelectionCriteria" name="alterEgo">
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Data fields required (list the fields required from the electronic database)</label>
+        <input type="text" class="form-control" id="alterEgo"
+               [(ngModel)]="model.Datafiel" name="alterEgo">
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Main person's degree(s)</label>
+        <input type="text" class="form-control" id="alterEgo"
+               [(ngModel)]="model.Mainpersondegree" name="alterEgo">
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Study name/Project title (if applicable)</label>
+        <input type="text" class="form-control" id="alterEgo"
+               [(ngModel)]="model.Studyname" name="alterEgo">
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">For funded projects, please indicate funder here</label>
+        <textarea type="text" id="form75" class="form-control md-textarea" rows="3" mdbInput></textarea>
+      </div>
+
+
+      <div class="form-group">
+        <label for="alterEgo">Funder grant or project number</label>
+        <input type="text" class="form-control" id="alterEgo"
+               [(ngModel)]="model.Funder" name="alterEgo">
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Are funds available to pay for this data analysis project?</label>
+        <input type="text" class="form-control" id="alterEgo"
+               [(ngModel)]="model.Arefunds" name="alterEgo">
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">If funds are available to pay, please indicate funding source:</label>
+        <input type="text" class="form-control" id="alterEgo"
+               [(ngModel)]="model.Iffunds" name="alterEgo">
+      </div>
+
+
+      <div class="form-group">
+        <label for="alterEgo">Administrative contact's email address*</label>
+        <input type="text" class="form-control" id="alterEgo"
+               [(ngModel)]="model.Administrative" name="alterEgo">
+      </div>
+
+      <div class="form-group">
+        <label for="power">Disease or Cancer Types</label>
+        <select class="form-control" id="power"
+                required
+                [(ngModel)]="model.Disease" name="power"
+                #power="ngModel">
+          <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+        </select>
+        <div [hidden]="power.valid || power.pristine" class="alert alert-danger">
+          Power is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="powerssss">If funds are available to pay, please indicate funding source:</label>
+        <select class="form-control" id="powerssss"
+                required
+                [(ngModel)]="model.powerssss" name="powerssss"
+                #powerssss="ngModel">
+          <option *ngFor="let pows of powerssss" [value]="pows">{{pows}}</option>
+        </select>
+        <div [hidden]="powerssss.valid || powerssss.pristine" class="alert alert-danger">
+          Power is required
+        </div>
+      </div>
+
+      <div class="form-group">
+          <div class="form-group col-md-12">
+            <label>Are funds available to pay for this data analysis project?</label>
+            <input type="radio" name="Question1" [(ngModel)]="Question1" [value]="true">Yes
+            <input type="radio" name="Question1" [(ngModel)]="Question1" [value]="false">No
+          </div>
+
+</div>
+
+<div class="form-group">
+<input [ngModel]="startDate | date:'yyyy-MM-dd'" (ngModelChange)="startDate = $event" type="date" name="startDate"/>
+</div>
+
+<div class="form-group">
+  <textarea type="text" id="form75" class="form-control md-textarea" rows="3" mdbInput></textarea>
+  <label for="form75">Material textarea</label>
+</div>
+
+
+      <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+      <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Request</button>
+      <i>with</i> reset
+
+      &nbsp;&nbsp;
+      <button type="button" class="btn btn-default" (click)="newHero()">New Request</button>
+      <i>without</i> reset
+
+     <!-- NOT SHOWN IN DOCS -->
+      <div>
+        <hr>
+        Name via form.controls = {{showFormControls(heroForm)}}
+      </div>
+     <!-- - -->
+    </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <h2>You submitted the following:</h2>
+    <div class="row">
+      <div class="col-xs-3">First Name</div>
+      <div class="col-xs-9">{{ model.firstname }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Last Name</div>
+      <div class="col-xs-9">{{ model.lastname }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Email Address</div>
+      <div class="col-xs-9">{{ model.email }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Date of Birth</div>
+      <div class="col-xs-9">{{ model.dateofbirth}}</div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-xs-3">Disease or Cancer Types</div>
+      <div class="col-xs-9">{{ model.Disease }}</div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+  </div>
+</div>
+
+<!-- ====================================================  -->
+  <div>
+    <form>
+
+       <!-- ... all of the form ... -->
+
+    </form>
+  </div>
+
+<!-- ====================================================  -->
+<hr>
+<style>
+  .no-style .ng-valid {
+  border-left: 1px  solid #CCC
+}
+
+  .no-style .ng-invalid {
+  border-left: 1px  solid #CCC
+}
+</style>
+<div class="no-style" style="margin-left: 4px">
+
+  <!-- ====================================================  -->
+
+  <!-- EXTRA MATERIAL FOR DOCUMENTATION -->
+
+
+</div>
+
+
+<!--
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

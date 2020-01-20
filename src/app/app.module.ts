@@ -1,0 +1,42 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppRoutingModule } from './app-routing.module';
+
+import { AppComponent } from './app.component';
+import { CoreModule } from './components/core/core.module';
+import { HomeComponent } from './components/home/home.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FormComponent } from './components/form/form.component';
+import { MapsComponent } from './components/maps/maps.component';
+import { ScrollViewModule } from '@progress/kendo-angular-scrollview';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ImageGalleryComponent } from './components/image-gallery/image-gallery.component';
+
+
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ContactComponent,
+    FormComponent,
+    MapsComponent,
+    ImageGalleryComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    CoreModule,
+    ScrollViewModule,
+    BrowserAnimationsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
