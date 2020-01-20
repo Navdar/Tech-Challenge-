@@ -4,14 +4,13 @@
 This is the technical documentation for the tech challenge project secure medical image storage system by MediDonate group. This repository hosts every subsystem of the project. The codebase is written in Angular (version 8.2.14). you can find the requirement modules in requirement.txt
 
 # Project Structure
-images: Stores the screenshosts of the system.
-reinvent: This folder has the codebase for central advertisement system. It creates a server that allows third party companies to add advertisement to system.
-Sphere: This folder hosts the main dashboard served to the users. It has 3 functions. It collects real time data from the microcontrollers in the sockets, it processes ads and maps it to certain users and it runs the main dashboard UI.
-Socket: Socket is the code to run on microcontrollers in the power sockets. Every 1 minute, it sends the time and the socket ID to the server. If the socket is not being used currently, it doesn't consume electricity.
-Test: Hosts the script for random data generation.
-db.sql: MySQL database structure. Creates tables used by the system and inserts some mock data. You can directly import this to your database.
-docker-compose.yaml: It builds the individual projects and runs them together.
-makefile: It compiles individual projects. Just to compile projects run make, to run them make docker. You need to have docker and golang installed on your system.
+* images: Stores the example of medical images.
+* home: Stores the code for home page bottom in website.
+* form: Stores the code for Form page bottom in website.
+* image-gallery: Stores the code for visualities of medical images
+* maps: Stores the code for knowledge graph of available medical image data set.  It creates a server that allows third party companies to see available data to system.
+* contact: Stores the code for contact bottom in website
+
 
 
 # Running
