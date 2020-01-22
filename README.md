@@ -26,12 +26,16 @@ The system uses Neo4j database for data storage.
 # Usage
 
 ## Form Button
+
+![image](image_git/form.jpg)
 In the form button, you have to fill the form in order to access to data. You should fill name, surname, project description and type of fund. In the last part, you should choose what kind of disses data set would you like to access. After that you should click submit button then you can see the filled form. However, if you want to change something in form, then you click edit button and go back form and after that you can submit the form again. After a while, you will receive a confirmation e-mail, then you can move on to maps button.
 
 ## Map Button
+![image](image_git/map.jpg)
 In the map button, you can see the entire data sets for every country. Whole medical images will be stored as a knowledge graph. This will make to access to data set easier and also more secure. You can zoom it see too much detail of it. By clicking name, you see the name of country and available medical image domain for that country. You can merge two or more country in order to get whole data set belong to that countries. When you finish your merging, then you can move the image bottom in order to see whole images.
 
 ## Images Button
+![image](image_git/image.jpg)
 In the images button, you can see whole images for the specific country. You can go forward see next image. You can see name of diseases such as malignant melanoma. And you can go backward see last image. After deciding amount images, would you like download then you download them as a zip file in secure way.
 
 
