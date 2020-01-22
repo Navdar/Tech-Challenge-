@@ -17,6 +17,7 @@ This is the technical documentation for the tech challenge project **secure medi
 * **Build Requirement Modules:** npm build
 * **Start Server:** npm start
 * **Server will be started in** http://localhost:4200/
+* In order to start database, you should have Neo4j Desktop version. The database will start in **bolt://localhost:7687**
 
 Run make docker. If Golang cannot find dependencies, go to sphere folder and run go get.
 Once every service starts, go to localhost:8080 and connect to db. Username is root, password is example. Import db.sql to the database.
