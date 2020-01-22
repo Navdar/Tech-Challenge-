@@ -23,30 +23,19 @@ Once every service starts, go to localhost:8080 and connect to db. Username is r
 Go to localhost:4000 to see user dashboard.
 Go to localhost:5000 to see reinvent dashboard.
 
-# Used technologies
+# Communication
+The system uses Neo4j database for data storage. 
 
+# Usage
 
-#  Communication
+## Form Button
+In the form button, you have to fill the form in order to access to data. You should fill name, surname, project description and type of fund. In the last part, you should choose what kind of disses data set would you like to access. After that you should click submit button then you can see the filled form. However, if you want to change something in form, then you click edit button and go back form and after that you can submit the form again. After a while, you will receive a confirmation e-mail, then you can move on to maps button.
 
-This project uses MQTT for the communication between sockets and server. Sockets publish to the topic my-topic and server is subscribed to that topic. An MQTT broker is distributed with the docker-compose.yaml in this project. Docker handles networking itself, thus the hostname for the MQTT server is given as mqtt, where the mqtt broker is mapped to.
+## Map Botton
+In the map botton, you can see the entire data sets for every country. Whole medical images will be stored as a knowledge graph. This will make to access to data set easier and also more secure. You can zoom it see too much detail of it. By clicking name, you see the name of country and available medical image domain for that country. You can merge two or more country in order to get whole data set belong to that countries. When you finish your merging, then you can move the image bottom in order to see whole images.
 
-The raspberry Pi in the building may not be reachable by users if every house uses a private network. To fix this problem, the proposed solution is tunneling from raspberry pi to a public server. This approach still protect the data. It also make the dasboard reachable outside the house.
-#  Database
-
-The system uses MySQL database for data storage. A MySQL instance is distributed with the project.
-
-Sphere uses the db called local. It has 6 tables.
-
-ads: Stores ads data. Every ad has a type and usage information which is used to compare ads with power usage data.
-measurements: Stores measurements sent by the sockets. Every socket has a unique id and the time that the measurement was collected.
-notifs: Stores notifications. Notifications are simple texts that concern every inhabitant of the building.
-promotions: Stores promotions created by ReInvent.
-repairs: Stores repair requests from house owners to reinvent. Requests have a status field that shows their completion.
-sockets: Stores microcontrolller data used by sockets. Every microcontroller has a unique id, a type and a status. The type is e.g. [Entertainment, Lighting, Cooking, Charging]
-ReInvent uses the db called cloud. It has only 1 table and it' identical to ads. Every 24 hour sphere syncs it's local ads table with reinvents table to update visible ads.
-
-To reach the database you can go to port 8080 on your deployment. An additional image called adminer is deployed by the system to allow GUI operations on the database.
-
+## Images Botton
+In the images botton, you can see whole images for the specific country. You can go forward see next image. You can see name of diseases such as malignant melanoma. And you can go backward see last image. After deciding amount images, would you like download then you download them as a zip file in secure way.
 
 
 
